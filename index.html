@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+    :root{
+      --White: hsl(0, 0%, 100%);
+      --Light_gray: hsl(212, 45%, 89%);
+      --Grayish_blue: hsl(220, 15%, 55%);
+      --Dark_blue: hsl(218, 44%, 22%);
+      --Para_fontsize: 15px;
+      --Head_fontsize: 21px;
+      --Font:'Outfit', sans-serif;
+      --Font_400:400;
+      --Font_700:700;
+    }
+    body{
+      background-color: var(--Light_gray);
+    }
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    .container{
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      font-family: var(--Font);
+      background-color: var(--White);
+      padding: 15px;
+      border-radius: 15px;
+      width:300px;
+      box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+    }
+    .desc{
+      text-align: center;
+      padding: 20px 5px;
+    }
+    .imgContainer img{
+      width: 100%;
+      border-radius: 10px;
+
+    }
+    .desc_heading{
+      font-size: var(--Para_fontsize);
+      font-weight: var(--Font_700);
+      font-size: var(--Head_fontsize);
+      color: var(--Dark_blue);
+    }
+    .desc_para{
+      font-size: var(--Para_fontsize);
+      font-weight: 400;
+      margin-top: 15px;
+      color: var(--Grayish_blue);
+    }
+    @media (max-width:375px){
+      .container{
+        width:85%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="imgContainer">
+      <img src="./images/image-qr-code.png" alt="qrCode">
+    </div>
+    <div class="desc">
+      <p class="desc_heading">
+        Improve your front-end skills by building projects
+      </p>
+      <p class="desc_para">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+      </p>
+    </div>
+  </div>
+</body>
+</html>
